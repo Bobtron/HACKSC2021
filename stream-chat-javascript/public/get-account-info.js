@@ -5,7 +5,11 @@
 //     server: 'wss://s1.ripple.com' // Public rippled server
 // });
 
-var api = new ripple.RippleAPI({server:'wss://s1.ripple.com/'});
+// Address: rBemDgBYvHhGXcuJBMMatQLEAaRKgBc32g
+// Secret: sp13b5jQ9taDGDFfWM1ijoJFUgVt3
+// Balance: 1,000 XRP
+
+var api = new ripple.RippleAPI({server:'wss://s.altnet.rippletest.net:51233'});
 
 // api.connect().then(() => {
 //     /* begin custom code ------------------------------------ */
@@ -29,7 +33,8 @@ var api = new ripple.RippleAPI({server:'wss://s1.ripple.com/'});
 function getAccountInfo(){
     api.connect().then(() => {
         /* begin custom code ------------------------------------ */
-        const myAddress = 'rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn';
+        // const myAddress = 'rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn';
+        const myAddress = 'rBemDgBYvHhGXcuJBMMatQLEAaRKgBc32g';
 
         console.log('getting account info for', myAddress);
         return api.getAccountInfo(myAddress);

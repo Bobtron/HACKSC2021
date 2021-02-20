@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Send Payment</title>
+<link rel="stylesheet" type="text/css" href="view.css" media="all">
+<script type="text/javascript" src="view.js"></script>
+<script src="https://unpkg.com/lodash@4.17.20/lodash.min.js"></script>
+<script src="https://unpkg.com/ripple-lib@1.8.0/build/ripple-latest-min.js"></script>
+<script type="text/javascript" src="sendxrp.js"></script>
+
+</head>
+<body id="main_body" >
+	
+	<img id="top" src="top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>Send Payment</a></h1>
+		<form id="form_16799" class="appnitro"  method="post" action="" onsubmit="sendXRP()">
+					<div class="form_description">
+			<h2>Send Payment</h2>
+			<p>Send XRP to a colleague </p>
+		</div>						
+			<ul >
+			
+					<li id="li_1" >
+		<label class="description" for="element_1">Name </label>
+		<span>
+			<input id="first" name= "element_1_1" class="element text" maxlength="255" size="8" value=""/>
+			<label>First</label>
+		</span>
+		<span>
+			<input id="last" name= "element_1_2" class="element text" maxlength="255" size="14" value=""/>
+			<label>Last</label>
+		</span> 
+		</li>		<li id="li_2" >
+		<label class="description" for="element_2">Your Address </label>
+		<div>
+			<input id="sender" name="element_2" class="element text medium" type="text" maxlength="255" value=""/>
+		</div><p class="guidelines" id="guide_2"><small>Enter your XRP address
+</small></p> 
+		</li>		<li id="li_3" >
+		<label class="description" for="element_3">Your Secret </label>
+		<div>
+			<input id="secret" name="element_3" class="element text medium" type="text" maxlength="255" value=""/>
+		</div><p class="guidelines" id="guide_3"><small>Enter your address's secret</small></p> 
+		</li>		<li id="li_4" >
+		<label class="description" for="element_4">Amount of XRP Drops </label>
+		<div>
+			<input id="amount" name="element_4" class="element text medium" type="text" maxlength="255" value=""/>
+		</div><p class="guidelines" id="guide_4"><small>Enter the amount of XRP drops you want to send</small></p> 
+		</li>		<li id="li_5" >
+		<label class="description" for="element_5">Destination </label>
+		<div>
+			<input id="receiver" name="element_5" class="element text medium" type="text" maxlength="255" value=""/>
+		</div><p class="guidelines" id="guide_5"><small>Enter the destination to send XRP to</small></p> 
+		</li>
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="16799" />
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</li>
+			</ul>
+		</form>
+	</div>
+	<img id="bottom" src="bottom.png" alt="">
+
+
+    <script type="text/javascript" src="view.js"></script>
+	</body>
+</html>
