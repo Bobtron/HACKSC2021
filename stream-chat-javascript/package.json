@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "ripple-lib": "^1.9.0",
+    "stream-chat": "^3.1.0"
+  }
+}
