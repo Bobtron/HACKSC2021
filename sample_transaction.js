@@ -6,12 +6,14 @@ const RippleAPI = require('ripple-lib').RippleAPI;
 const myAddr = 'rpSDxPwUyUzyFxAyVGwGt1hoJGC8neLZhF';
 const mySecret = 'sh7ePwac3g2Py36YnnzTqJYxrEJpR';
 
+const recAddr = 'rUpy3eEg8rqjqfUoLeBnZkscbKbFsKXC3v';
+
 /* Define the order to place here */
 const myOrder = {
   'direction': 'buy',
   'quantity': {
     'currency': 'FOO',
-    'counterparty': 'rUpy3eEg8rqjqfUoLeBnZkscbKbFsKXC3v',
+    'counterparty': recAddr,
     'value': '100'
   },
   'totalPrice': {
