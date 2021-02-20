@@ -1,0 +1,22 @@
+{
+  "name": "hacksc2021",
+  "version": "1.0.0",
+  "description": "hacksc2021 proj for usc db team its gonna be lit best app ever WOW",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bobtron/HACKSC2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bobtron/HACKSC2021/issues"
+  },
+  "homepage": "https://github.com/Bobtron/HACKSC2021#readme",
+  "dependencies": {
+    "ripple-lib": "^1.9.0"
+  }
+}
