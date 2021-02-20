@@ -2,7 +2,7 @@
 const RippleAPI = require('ripple-lib').RippleAPI;
 
 const api = new RippleAPI({
-  server: 'wss://s1.ripple.com' // Public rippled server
+  server: 'wss://testnet.xrpl-labs.com'
 });
 api.connect().then(() => {
   /* begin custom code ------------------------------------ */
