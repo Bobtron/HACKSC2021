@@ -1,0 +1,359 @@
+I210220 22:18:18.617866 1 util/log/sync_buffer.go:195 ⋮ [config] file created at: 2021/02/20 22:18:18
+I210220 22:18:18.617874 1 util/log/sync_buffer.go:195 ⋮ [config] running on machine: ‹Personas-MacBook-Pro›
+I210220 22:18:18.617879 1 util/log/sync_buffer.go:195 ⋮ [config] binary: CockroachDB CCL v20.2.5 (x86_64-apple-darwin14, built 2021/02/16 12:57:34, go1.13.14)
+I210220 22:18:18.617883 1 util/log/sync_buffer.go:195 ⋮ [config] arguments: ‹[cockroach start --insecure --store=node1 --listen-addr=localhost:26257 --http-addr=localhost:8080 --join=localhost:26257,localhost:26258,localhost:26259]›
+I210220 22:18:18.617892 1 util/log/sync_buffer.go:195 ⋮ [config] line format: [IWEF]yymmdd hh:mm:ss.uuuuuu goid file:line msg utf8=✓
+W210220 22:18:18.617666 1 cli/start.go:1143 ⋮ ALL SECURITY CONTROLS HAVE BEEN DISABLED!
+
+This mode is intended for non-production testing only.
+
+In this mode:
+- Your cluster is open to any client that can access ‹localhost›.
+- Intruders with access to your machine or network can observe client-server traffic.
+- Intruders can log in without password and read or write any data in the cluster.
+- Intruders can consume all your server's resources and cause unavailability.
+I210220 22:18:18.618103 1 cli/start.go:1153 ⋮ To start a secure server without mandating TLS for clients,
+consider --accept-sql-without-tls instead. For other options, see:
+
+- ‹https://go.crdb.dev/issue-v/53404/v20.2›
+- https://www.cockroachlabs.com/docs/v20.2/secure-a-cluster.html
+W210220 22:18:18.618170 1 cli/start.go:987 ⋮ ‹Using the default setting for --cache (128 MiB).›
+‹  A significantly larger value is usually needed for good performance.›
+‹  If you have a dedicated server a reasonable setting is --cache=.25 (4.0 GiB).›
+I210220 22:18:18.618197 1 cli/start.go:1168 ⋮ ‹CockroachDB CCL v20.2.5 (x86_64-apple-darwin14, built 2021/02/16 12:57:34, go1.13.14)›
+I210220 22:18:18.619190 1 server/config.go:428 ⋮ system total memory: ‹16 GiB›
+I210220 22:18:18.619209 1 server/config.go:430 ⋮ server configuration:
+‹max offset             500000000›
+‹cache size             128 MiB›
+‹SQL memory pool size   4.0 GiB›
+‹scan interval          10m0s›
+‹scan min idle time     10ms›
+‹scan max idle time     1s›
+‹event log enabled      true›
+I210220 22:18:18.619254 1 cli/start.go:965 ⋮ using local environment variables: ‹COCKROACH_BACKGROUND_RESTART=1›
+I210220 22:18:18.619302 1 cli/start.go:972 ⋮ process identity: ‹uid 501 euid 501 gid 20 egid 20›
+I210220 22:18:18.933227 1 cli/start.go:511 ⋮ GEOS loaded from directory ‹/usr/local/lib/cockroach›
+I210220 22:18:18.933284 1 cli/start.go:516 ⋮ starting cockroach node
+I210220 22:18:19.087762 61 server/server.go:790 ⋮ [n?] monitoring forward clock jumps based on server.clock.forward_jump_check_enabled
+I210220 22:18:19.186036 61 server/config.go:619 ⋮ [n?] 1 storage engine‹› initialized
+I210220 22:18:19.186193 61 server/config.go:622 ⋮ [n?] ‹Pebble cache size: 128 MiB›
+I210220 22:18:19.186210 61 server/config.go:622 ⋮ [n?] ‹store 0: RocksDB, max size 0 B, max open file limit 10000›
+I210220 22:18:19.205099 61 util/log/log.go:50 ⋮ initial startup completed
+Node will now attempt to join a running cluster, or wait for `cockroach init`.
+Client connections will be accepted after this completes successfully.
+Check the log file(s) for progress. 
+I210220 22:18:19.205352 61 server/init.go:208 ⋮ [n?] no stores bootstrapped
+I210220 22:18:19.205393 61 server/init.go:209 ⋮ [n?] awaiting `cockroach init` or join with an already initialized node
+W210220 22:18:19.206490 170 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26258  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused". Reconnecting...›
+W210220 22:18:19.206603 168 server/init.go:436 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210220 22:18:19.207496 32 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26259  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused". Reconnecting...›
+W210220 22:18:19.207558 168 server/init.go:436 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210220 22:18:20.209277 168 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210220 22:18:21.210380 168 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210220 22:18:22.211630 168 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210220 22:18:23.215894 168 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210220 22:18:24.211221 168 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210220 22:18:25.211410 168 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210220 22:18:26.211689 168 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210220 22:18:27.213064 168 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210220 22:18:28.212315 168 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210220 22:18:29.211639 168 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210220 22:18:30.212219 168 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210220 22:18:31.211048 168 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210220 22:18:32.211441 168 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210220 22:18:33.213746 168 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210220 22:18:34.208335 168 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+W210220 22:18:35.211451 168 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+W210220 22:18:36.213343 168 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+I210220 22:18:37.194808 61 server/init.go:266 ⋮ [n?] cluster ‹97379f59-8bf4-4b25-aecd-228e5afa765f› has been created
+I210220 22:18:37.194892 61 server/init.go:267 ⋮ [n?] allocated node ID: n1 (for self)
+W210220 22:18:37.195066 61 gossip/gossip.go:1494 ⋮ [n?] no incoming or outgoing connections
+I210220 22:18:37.195075 322 server/server.go:1424 ⋮ [n?] connecting to gossip network to verify cluster ID ‹"97379f59-8bf4-4b25-aecd-228e5afa765f"›
+I210220 22:18:37.195141 61 gossip/gossip.go:403 ⋮ [n1] NodeDescriptor set to ‹node_id:1 address:<network_field:"tcp" address_field:"localhost:26257" > attrs:<> locality:<> ServerVersion:<major_val:20 minor_val:2 patch:0 unstable:0 > build_tag:"v20.2.5" started_at:1613859517195124000 cluster_name:"" sql_address:<network_field:"tcp" address_field:"localhost:26257" >›
+I210220 22:18:37.197370 300 vendor/github.com/cockroachdb/circuitbreaker/circuitbreaker.go:322 ⋮ [n1] circuitbreaker: ‹gossip 127.0.0.1:26257->localhost:26258› tripped: ‹initial connection heartbeat failed›: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+I210220 22:18:37.197491 300 vendor/github.com/cockroachdb/circuitbreaker/circuitbreaker.go:447 ⋮ [n1] circuitbreaker: ‹gossip 127.0.0.1:26257->localhost:26258› event: ‹BreakerTripped›
+W210220 22:18:37.197518 300 gossip/client.go:118 ⋮ [n1] failed to start gossip client to ‹localhost:26258›: ‹initial connection heartbeat failed›: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connect: connection refused"›
+I210220 22:18:37.202092 322 server/server.go:1427 ⋮ [n1] node connected via gossip
+W210220 22:18:37.202160 398 kv/kvserver/store.go:1691 ⋮ [n1,s1,r6/1:‹/Table/{SystemCon…-11}›] could not gossip system config: ‹[NotLeaseHolderError] r6: replica (n1,s1):1 not lease holder; lease holder unknown›
+(1) ‹[NotLeaseHolderError] r6: replica (n1,s1):1 not lease holder; lease holder unknown›
+Error types: (1) *roachpb.NotLeaseHolderError
+I210220 22:18:37.203532 61 server/node.go:430 ⋮ [n1] initialized store [n1,s1]: disk (capacity=234 GiB, available=26 GiB, used=47 KiB, logicalBytes=19 KiB), ranges=35, leases=0, queries=0.00, writes=0.00, bytesPerReplica={p10=0.00 p25=0.00 p50=0.00 p75=0.00 p90=166.00 pMax=16616.00}, writesPerReplica={p10=0.00 p25=0.00 p50=0.00 p75=0.00 p90=0.00 pMax=0.00}
+I210220 22:18:37.203662 61 kv/kvserver/stores.go:236 ⋮ [n1] read 0 node addresses from persistent storage
+I210220 22:18:37.235175 61 server/node.go:489 ⋮ [n1] started with engine type ‹2›
+I210220 22:18:37.235326 61 server/node.go:491 ⋮ [n1] started with attributes ‹[]›
+I210220 22:18:37.236338 61 server/goroutinedumper/goroutinedumper.go:120 ⋮ [n1] writing goroutine dumps to ‹/Users/personanongrata/documents/usc/hacksc2021/stream-chat-javascript/public/node1/logs/goroutine_dump›
+I210220 22:18:37.236595 61 server/heapprofiler/heapprofiler.go:49 ⋮ [n1] writing go heap profiles to ‹/Users/personanongrata/documents/usc/hacksc2021/stream-chat-javascript/public/node1/logs/heap_profiler› at least every 1h0m0s
+I210220 22:18:37.236635 61 server/heapprofiler/cgoprofiler.go:53 ⋮ [n1] to enable jmalloc profiling: "export MALLOC_CONF=prof:true" or "ln -s prof:true /etc/malloc.conf"
+I210220 22:18:37.236652 61 server/heapprofiler/statsprofiler.go:54 ⋮ [n1] writing memory stats to ‹/Users/personanongrata/documents/usc/hacksc2021/stream-chat-javascript/public/node1/logs/heap_profiler› at last every 1h0m0s
+I210220 22:18:37.236683 61 server/server.go:1544 ⋮ [n1] starting http server at ‹127.0.0.1:8080› (use: ‹localhost:8080›)
+I210220 22:18:37.236728 61 server/server.go:1551 ⋮ [n1] starting grpc/postgres server at ‹127.0.0.1:26257›
+I210220 22:18:37.236766 61 server/server.go:1552 ⋮ [n1] advertising CockroachDB node at ‹localhost:26257›
+W210220 22:18:37.248590 398 kv/kvserver/store.go:1691 ⋮ [n1,s1,r6/1:‹/Table/{SystemCon…-11}›] could not gossip system config: ‹[NotLeaseHolderError] r6: replica (n1,s1):1 not lease holder; lease holder unknown›
+(1) ‹[NotLeaseHolderError] r6: replica (n1,s1):1 not lease holder; lease holder unknown›
+Error types: (1) *roachpb.NotLeaseHolderError
+I210220 22:18:37.387358 61 sql/sqlliveness/slinstance/slinstance.go:252 ⋮ [n1] starting SQL liveness instance
+I210220 22:18:37.387553 483 sql/temporary_schema.go:510 ⋮ [n1] running temporary object cleanup background job
+I210220 22:18:37.408011 440 kv/kvserver/replica_rangefeed.go:608 ⋮ [n1,s1,r6/1:‹/Table/{SystemCon…-11}›] RangeFeed closed timestamp is empty
+I210220 22:18:37.421739 483 sql/temporary_schema.go:545 ⋮ [n1] found 0 temporary schemas
+I210220 22:18:37.421814 483 sql/temporary_schema.go:548 ⋮ [n1] early exiting temporary schema cleaner as no temporary schemas were found
+I210220 22:18:37.421834 483 sql/temporary_schema.go:549 ⋮ [n1] completed temporary object cleanup job
+I210220 22:18:37.421855 483 sql/temporary_schema.go:627 ⋮ [n1] temporary object cleaner next scheduled to run at 2021-02-20 22:48:37.387445 +0000 UTC
+I210220 22:18:37.497048 305 sql/sqlliveness/slstorage/slstorage.go:342 ⋮ [n1] inserted sqlliveness session ‹57de6f33c30c4b0ea372fce150755046›
+I210220 22:18:37.497157 305 sql/sqlliveness/slinstance/slinstance.go:143 ⋮ [n1] created new SQL liveness session ‹57de6f33c30c4b0ea372fce150755046›
+I210220 22:18:37.497060 303 sql/event_log.go:162 ⋮ [n1] Event: ‹"node_join"›, target: 1, info: ‹{Descriptor:{NodeID:1 Address:localhost:26257 Attrs: Locality: ServerVersion:20.2 BuildTag:v20.2.5 StartedAt:1613859517195124000 LocalityAddress:[] ClusterName: SQLAddress:localhost:26257} ClusterID:97379f59-8bf4-4b25-aecd-228e5afa765f StartedAt:1613859517195124000 LastUp:1613859517195124000}›
+I210220 22:18:37.539516 443 sql/event_log.go:162 ⋮ [n1,intExec=‹optInToDiagnosticsStatReporting›] Event: ‹"set_cluster_setting"›, target: 0, info: ‹{SettingName:diagnostics.reporting.enabled Value:true User:root}›
+I210220 22:18:37.623244 506 sql/event_log.go:162 ⋮ [n1,intExec=‹set-setting›] Event: ‹"set_cluster_setting"›, target: 0, info: ‹{SettingName:version Value:20.2 User:root}›
+I210220 22:18:37.882998 996 sql/event_log.go:162 ⋮ [n1,intExec=‹initializeClusterSecret›] Event: ‹"set_cluster_setting"›, target: 0, info: ‹{SettingName:cluster.secret Value:4e01574f-cf82-4f1d-a836-d91e40f03d2d User:root}›
+I210220 22:18:38.005352 474 sql/event_log.go:162 ⋮ [n1,intExec=‹create-default-db›] Event: ‹"create_database"›, target: 50, info: ‹{DatabaseName:defaultdb Statement:CREATE DATABASE IF NOT EXISTS defaultdb User:root}›
+I210220 22:18:38.091010 937 sql/event_log.go:162 ⋮ [n1,intExec=‹create-default-db›] Event: ‹"create_database"›, target: 51, info: ‹{DatabaseName:postgres Statement:CREATE DATABASE IF NOT EXISTS postgres User:root}›
+W210220 22:18:38.201892 222 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26258  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing cannot reuse client connection". Reconnecting...›
+I210220 22:18:38.203153 1167 vendor/github.com/cockroachdb/circuitbreaker/circuitbreaker.go:322 ⋮ [n1] circuitbreaker: ‹gossip 127.0.0.1:26257->localhost:26259› tripped: ‹initial connection heartbeat failed›: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+I210220 22:18:38.203259 1167 vendor/github.com/cockroachdb/circuitbreaker/circuitbreaker.go:447 ⋮ [n1] circuitbreaker: ‹gossip 127.0.0.1:26257->localhost:26259› event: ‹BreakerTripped›
+W210220 22:18:38.203310 1167 gossip/client.go:118 ⋮ [n1] failed to start gossip client to ‹localhost:26259›: ‹initial connection heartbeat failed›: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connect: connection refused"›
+I210220 22:18:38.203435 325 gossip/gossip.go:1508 ⋮ [n1] node has connected to cluster via gossip
+I210220 22:18:38.215208 325 kv/kvserver/stores.go:255 ⋮ [n1] wrote 0 node addresses to persistent storage
+I210220 22:18:38.377946 61 server/server_sql.go:800 ⋮ [n1] done ensuring all necessary migrations have run
+I210220 22:18:38.377997 61 server/server.go:1887 ⋮ [n1] serving sql connections
+I210220 22:18:38.378094 1305 jobs/job_scheduler.go:346 ⋮ [n1] waiting 4m0s before scheduled jobs daemon start
+I210220 22:18:38.378192 61 cli/start.go:677 ⋮ [config] clusterID: ‹97379f59-8bf4-4b25-aecd-228e5afa765f›
+I210220 22:18:38.378247 61 cli/start.go:687 ⋮ node startup completed:
+CockroachDB node starting at 2021-02-20 22:18:38.378079 +0000 UTC (took 19.8s)
+build:               CCL v20.2.5 @ 2021/02/16 12:57:34 (go1.13.14)
+webui:               ‹http://localhost:8080›
+sql:                 ‹postgresql://root@localhost:26257?sslmode=disable›
+RPC client flags:    ‹cockroach <client cmd> --host=localhost:26257 --insecure›
+logs:                ‹/Users/personanongrata/documents/usc/hacksc2021/stream-chat-javascript/public/node1/logs›
+temp dir:            ‹/Users/personanongrata/documents/usc/hacksc2021/stream-chat-javascript/public/node1/cockroach-temp152059718›
+external I/O path:   ‹/Users/personanongrata/documents/usc/hacksc2021/stream-chat-javascript/public/node1/extern›
+store[0]:            ‹path=/Users/personanongrata/documents/usc/hacksc2021/stream-chat-javascript/public/node1›
+storage engine:      pebble
+status:              initialized new cluster
+clusterID:           ‹97379f59-8bf4-4b25-aecd-228e5afa765f›
+nodeID:              1
+I210220 22:18:38.386310 1306 server/server_update.go:55 ⋮ [n1] no need to upgrade, cluster already at the newest version
+W210220 22:18:39.206084 1169 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26259  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing cannot reuse client connection". Reconnecting...›
+I210220 22:18:41.255209 1249 kv/kvserver/replica_consistency.go:257 ⋮ [n1,consistencyChecker,s1,r4/1:‹/System{/tsd-tse}›] triggering stats recomputation to resolve delta of {ContainsEstimates:1576 LastUpdateNanos:1613859517297523000 IntentAge:0 GCBytesAge:0 LiveBytes:-43025 LiveCount:-788 KeyBytes:-39873 KeyCount:-788 ValBytes:-3152 ValCount:-788 IntentBytes:0 IntentCount:0 SysBytes:0 SysCount:0 AbortSpanBytes:0}
+W210220 22:18:47.243953 408 server/status/runtime.go:452 ⋮ [n1] unable to get file descriptor usage (will not try again): ‹not implemented on darwin›
+I210220 22:18:47.251048 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 88 MiB RSS, 218 goroutines, 21 MiB/34 MiB/42 MiB GO alloc/idle/total, 4.2 MiB/7.2 MiB CGO alloc/total, 0.0 CGO/sec, 0.0/0.0 %(u/s)time, 0.0 %gc (10x), 8.0 MiB/3.0 MiB (r/w)net
+I210220 22:18:57.239698 435 kv/kvserver/store.go:2625 ⋮ [n1,s1] sstables (read amplification = 0):
+‹›
+I210220 22:18:57.239876 435 kv/kvserver/store.go:2626 ⋮ [n1,s1] ‹›
+‹__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp›
+‹    WAL         3   615 K       -   610 K       -       -       -       -   615 K       -       -       -     1.0›
+‹      0         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      6         0     0 B       -     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹  total         0     0 B       -   615 K     0 B       0     0 B       0   615 K       0     0 B       0     1.0›
+‹  flush         0›
+‹compact         0     0 B          (size == estimated-debt)›
+‹ memtbl         3   1.8 M›
+‹zmemtbl         0     0 B›
+‹   ztbl         0     0 B›
+‹ bcache         0     0 B    0.0%  (score == hit-rate)›
+‹ tcache         0     0 B    0.0%  (score == hit-rate)›
+‹ titers         0›
+‹ filter         -       -    0.0%  (score == utility)›
+I210220 22:18:57.253121 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 90 MiB RSS, 218 goroutines, 30 MiB/26 MiB/45 MiB GO alloc/idle/total, 4.9 MiB/8.3 MiB CGO alloc/total, 0.7 CGO/sec, 1.2/0.8 %(u/s)time, 0.0 %gc (0x), 3.1 MiB/1.1 MiB (r/w)net
+I210220 22:19:07.258481 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 95 MiB RSS, 217 goroutines, 25 MiB/30 MiB/50 MiB GO alloc/idle/total, 5.0 MiB/8.4 MiB CGO alloc/total, 0.6 CGO/sec, 1.5/0.8 %(u/s)time, 0.0 %gc (1x), 3.0 MiB/1.0 MiB (r/w)net
+I210220 22:19:15.569862 1697 sql/event_log.go:162 ⋮ [n1,client=‹127.0.0.1:52811›,hostnossl,user=root] Event: ‹"create_database"›, target: 52, info: ‹{DatabaseName:bank Statement:CREATE DATABASE bank User:root}›
+I210220 22:19:17.259454 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 96 MiB RSS, 218 goroutines, 32 MiB/24 MiB/50 MiB GO alloc/idle/total, 5.0 MiB/8.4 MiB CGO alloc/total, 0.6 CGO/sec, 1.2/0.8 %(u/s)time, 0.0 %gc (0x), 3.0 MiB/1.1 MiB (r/w)net
+I210220 22:19:20.445977 1697 sql/table.go:102 ⋮ [n1,client=‹127.0.0.1:52811›,hostnossl,user=root] queued new database schema change job 635008320937656321 for database 52
+I210220 22:19:20.504053 1697 jobs/registry.go:309 ⋮ [n1,client=‹127.0.0.1:52811›,hostnossl,user=root] scheduled jobs ‹[635008320937656321]›
+I210220 22:19:20.519798 2359 jobs/adopt.go:137 ⋮ job 635008320937656321: resuming execution
+I210220 22:19:20.524447 2344 jobs/registry.go:1103 ⋮ [n1] SCHEMA CHANGE job 635008320937656321: stepping through state running with error: <nil>
+I210220 22:19:20.554081 2344 sql/schema_changer.go:567 ⋮ [n1,job=635008320937656321,scExec,id=52] schema change on ‹"bank"› (v2) starting execution...
+I210220 22:19:20.554138 2344 sql/schema_changer.go:978 ⋮ [n1,job=635008320937656321,scExec,id=52] waiting for a single version...
+I210220 22:19:20.555627 2344 sql/schema_changer.go:980 ⋮ [n1,job=635008320937656321,scExec,id=52] waiting for a single version... done (at v 2)
+I210220 22:19:20.555673 2344 jobs/registry.go:1103 ⋮ [n1] SCHEMA CHANGE job 635008320937656321: stepping through state succeeded with error: <nil>
+I210220 22:19:27.264939 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 102 MiB RSS, 218 goroutines, 24 MiB/31 MiB/54 MiB GO alloc/idle/total, 7.1 MiB/10 MiB CGO alloc/total, 0.7 CGO/sec, 1.6/0.7 %(u/s)time, 0.0 %gc (1x), 3.1 MiB/1.2 MiB (r/w)net
+I210220 22:19:37.237658 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+gossip connectivity
+  n1 [sentinel];
+I210220 22:19:37.267646 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 102 MiB RSS, 217 goroutines, 31 MiB/25 MiB/54 MiB GO alloc/idle/total, 7.1 MiB/10 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.6 %(u/s)time, 0.0 %gc (0x), 2.3 MiB/1.2 MiB (r/w)net
+I210220 22:19:47.267700 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 103 MiB RSS, 215 goroutines, 38 MiB/19 MiB/54 MiB GO alloc/idle/total, 7.2 MiB/10 MiB CGO alloc/total, 0.6 CGO/sec, 1.0/0.6 %(u/s)time, 0.0 %gc (0x), 2.9 MiB/1.2 MiB (r/w)net
+I210220 22:19:57.273087 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 104 MiB RSS, 215 goroutines, 27 MiB/27 MiB/54 MiB GO alloc/idle/total, 7.2 MiB/11 MiB CGO alloc/total, 0.6 CGO/sec, 1.2/0.6 %(u/s)time, 0.0 %gc (1x), 2.4 MiB/1.2 MiB (r/w)net
+I210220 22:20:07.274298 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 104 MiB RSS, 215 goroutines, 33 MiB/22 MiB/54 MiB GO alloc/idle/total, 7.2 MiB/11 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.2 MiB (r/w)net
+I210220 22:20:17.278019 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 105 MiB RSS, 216 goroutines, 22 MiB/32 MiB/54 MiB GO alloc/idle/total, 7.2 MiB/11 MiB CGO alloc/total, 0.6 CGO/sec, 1.1/0.6 %(u/s)time, 0.0 %gc (1x), 2.1 MiB/1.2 MiB (r/w)net
+I210220 22:20:27.281370 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 105 MiB RSS, 216 goroutines, 29 MiB/26 MiB/54 MiB GO alloc/idle/total, 7.3 MiB/11 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.2 MiB/1.2 MiB (r/w)net
+I210220 22:20:37.234363 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+I210220 22:20:37.281903 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 106 MiB RSS, 216 goroutines, 35 MiB/21 MiB/54 MiB GO alloc/idle/total, 11 MiB/15 MiB CGO alloc/total, 0.7 CGO/sec, 0.9/0.7 %(u/s)time, 0.0 %gc (0x), 2.2 MiB/1.1 MiB (r/w)net
+I210220 22:20:47.285400 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 106 MiB RSS, 215 goroutines, 25 MiB/29 MiB/54 MiB GO alloc/idle/total, 11 MiB/15 MiB CGO alloc/total, 0.6 CGO/sec, 1.2/0.6 %(u/s)time, 0.0 %gc (1x), 2.2 MiB/1.1 MiB (r/w)net
+I210220 22:20:57.285631 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 106 MiB RSS, 215 goroutines, 31 MiB/24 MiB/54 MiB GO alloc/idle/total, 11 MiB/15 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.6 %(u/s)time, 0.0 %gc (0x), 2.2 MiB/1.1 MiB (r/w)net
+I210220 22:21:07.288794 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 107 MiB RSS, 215 goroutines, 38 MiB/19 MiB/54 MiB GO alloc/idle/total, 12 MiB/15 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.5 %(u/s)time, 0.0 %gc (0x), 2.2 MiB/1.1 MiB (r/w)net
+I210220 22:21:17.292319 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 108 MiB RSS, 216 goroutines, 25 MiB/29 MiB/56 MiB GO alloc/idle/total, 12 MiB/15 MiB CGO alloc/total, 0.6 CGO/sec, 1.2/0.6 %(u/s)time, 0.0 %gc (1x), 2.2 MiB/1.1 MiB (r/w)net
+I210220 22:21:27.296924 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 109 MiB RSS, 216 goroutines, 31 MiB/25 MiB/56 MiB GO alloc/idle/total, 12 MiB/15 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.2 MiB/1.1 MiB (r/w)net
+I210220 22:21:37.231939 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+I210220 22:21:37.298150 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 109 MiB RSS, 216 goroutines, 37 MiB/20 MiB/56 MiB GO alloc/idle/total, 12 MiB/15 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.6 %(u/s)time, 0.0 %gc (0x), 2.2 MiB/1.1 MiB (r/w)net
+I210220 22:21:45.646158 4281 sql/event_log.go:162 ⋮ [n1,client=‹127.0.0.1:52820›,hostnossl,user=‹maxroach›] Event: ‹"create_table"›, target: 53, info: ‹{TableName:bank.public.accounts Statement:CREATE TABLE IF NOT EXISTS accounts (id INT8 PRIMARY KEY, balance INT8) User:maxroach}›
+I210220 22:21:45.655806 4311 kv/kvserver/replica_command.go:414 ⋮ [n1,split,s1,r35/1:‹/{Table/39-Max}›] initiating a split of this range at key ‹/Table/53› [r36] (‹zone config›)‹›
+I210220 22:21:47.301735 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 110 MiB RSS, 216 goroutines, 26 MiB/29 MiB/56 MiB GO alloc/idle/total, 12 MiB/15 MiB CGO alloc/total, 0.7 CGO/sec, 1.7/0.8 %(u/s)time, 0.0 %gc (1x), 2.2 MiB/1.1 MiB (r/w)net
+I210220 22:21:57.303649 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 110 MiB RSS, 216 goroutines, 31 MiB/25 MiB/56 MiB GO alloc/idle/total, 12 MiB/15 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.1 MiB (r/w)net
+I210220 22:22:07.304320 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 110 MiB RSS, 216 goroutines, 37 MiB/20 MiB/56 MiB GO alloc/idle/total, 12 MiB/15 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.2 MiB/1.2 MiB (r/w)net
+I210220 22:22:17.306925 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 111 MiB RSS, 217 goroutines, 25 MiB/29 MiB/56 MiB GO alloc/idle/total, 12 MiB/15 MiB CGO alloc/total, 0.6 CGO/sec, 1.2/0.6 %(u/s)time, 0.0 %gc (1x), 2.2 MiB/1.2 MiB (r/w)net
+I210220 22:22:27.305634 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 111 MiB RSS, 217 goroutines, 31 MiB/24 MiB/56 MiB GO alloc/idle/total, 12 MiB/15 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.6 %(u/s)time, 0.0 %gc (0x), 2.2 MiB/1.2 MiB (r/w)net
+I210220 22:22:37.231870 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+I210220 22:22:37.309678 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 112 MiB RSS, 217 goroutines, 37 MiB/19 MiB/56 MiB GO alloc/idle/total, 12 MiB/15 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.6 %(u/s)time, 0.0 %gc (0x), 2.0 MiB/1.3 MiB (r/w)net
+I210220 22:22:37.491051 5005 jobs/registry.go:1103 ⋮ [n1] AUTO CREATE STATS job 635008966346997761: stepping through state running with error: <nil>
+I210220 22:22:37.671873 5005 jobs/registry.go:1103 ⋮ [n1] AUTO CREATE STATS job 635008966346997761: stepping through state succeeded with error: <nil>
+I210220 22:22:47.312139 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 113 MiB RSS, 216 goroutines, 29 MiB/27 MiB/56 MiB GO alloc/idle/total, 12 MiB/15 MiB CGO alloc/total, 0.6 CGO/sec, 1.9/0.7 %(u/s)time, 0.0 %gc (1x), 1.3 MiB/1.4 MiB (r/w)net
+I210220 22:22:57.314783 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 113 MiB RSS, 216 goroutines, 35 MiB/22 MiB/56 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.7 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 1.4 MiB/1.4 MiB (r/w)net
+I210220 22:23:07.316567 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 114 MiB RSS, 216 goroutines, 41 MiB/16 MiB/56 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 1.4 MiB/1.4 MiB (r/w)net
+I210220 22:23:17.318228 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 114 MiB RSS, 217 goroutines, 30 MiB/24 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 1.2/0.7 %(u/s)time, 0.0 %gc (1x), 1.6 MiB/1.4 MiB (r/w)net
+I210220 22:23:27.326679 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 114 MiB RSS, 217 goroutines, 36 MiB/19 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 1.6 MiB/1.6 MiB (r/w)net
+I210220 22:23:37.229563 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+I210220 22:23:37.323961 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 115 MiB RSS, 217 goroutines, 42 MiB/14 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 1.5 MiB/1.4 MiB (r/w)net
+I210220 22:23:47.329344 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 116 MiB RSS, 216 goroutines, 31 MiB/25 MiB/59 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 1.5/0.7 %(u/s)time, 0.0 %gc (1x), 1.6 MiB/1.4 MiB (r/w)net
+I210220 22:23:57.332768 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 116 MiB RSS, 216 goroutines, 36 MiB/20 MiB/59 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 1.3 MiB/1.5 MiB (r/w)net
+I210220 22:24:07.335715 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 117 MiB RSS, 216 goroutines, 22 MiB/30 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 1.3/0.7 %(u/s)time, 0.0 %gc (1x), 1.3 MiB/1.4 MiB (r/w)net
+I210220 22:24:17.339701 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 117 MiB RSS, 217 goroutines, 29 MiB/26 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 1.0/0.6 %(u/s)time, 0.0 %gc (0x), 1.4 MiB/1.4 MiB (r/w)net
+I210220 22:24:27.343458 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 117 MiB RSS, 217 goroutines, 35 MiB/20 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.5 %(u/s)time, 0.0 %gc (0x), 1.8 MiB/1.6 MiB (r/w)net
+I210220 22:24:37.227303 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+I210220 22:24:37.348321 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 118 MiB RSS, 217 goroutines, 23 MiB/30 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 1.2/0.7 %(u/s)time, 0.0 %gc (1x), 1.6 MiB/1.4 MiB (r/w)net
+I210220 22:24:47.351990 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 118 MiB RSS, 216 goroutines, 30 MiB/26 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 1.0/0.6 %(u/s)time, 0.0 %gc (0x), 1.2 MiB/1.4 MiB (r/w)net
+I210220 22:24:57.352415 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 118 MiB RSS, 216 goroutines, 36 MiB/20 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 1.2 MiB/1.3 MiB (r/w)net
+I210220 22:25:07.356576 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 119 MiB RSS, 216 goroutines, 22 MiB/30 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 1.0/0.6 %(u/s)time, 0.0 %gc (1x), 1.6 MiB/1.4 MiB (r/w)net
+I210220 22:25:17.357943 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 119 MiB RSS, 217 goroutines, 29 MiB/26 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.3 MiB (r/w)net
+I210220 22:25:27.358063 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 119 MiB RSS, 217 goroutines, 35 MiB/21 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.4 MiB (r/w)net
+I210220 22:25:37.223876 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+I210220 22:25:37.360621 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 119 MiB RSS, 217 goroutines, 23 MiB/30 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 1.1/0.6 %(u/s)time, 0.0 %gc (1x), 2.1 MiB/1.2 MiB (r/w)net
+I210220 22:25:47.361756 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 120 MiB RSS, 216 goroutines, 30 MiB/26 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 1.1/0.6 %(u/s)time, 0.0 %gc (0x), 2.2 MiB/1.2 MiB (r/w)net
+I210220 22:25:57.365901 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 120 MiB RSS, 216 goroutines, 36 MiB/20 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.6 %(u/s)time, 0.0 %gc (0x), 2.3 MiB/1.2 MiB (r/w)net
+I210220 22:26:07.370301 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 120 MiB RSS, 216 goroutines, 22 MiB/30 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 1.1/0.6 %(u/s)time, 0.0 %gc (1x), 2.2 MiB/1.2 MiB (r/w)net
+I210220 22:26:17.371352 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 121 MiB RSS, 217 goroutines, 31 MiB/24 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 1.0/0.6 %(u/s)time, 0.0 %gc (0x), 2.3 MiB/1.3 MiB (r/w)net
+I210220 22:26:27.373507 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 121 MiB RSS, 217 goroutines, 37 MiB/19 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.6 %(u/s)time, 0.0 %gc (0x), 2.0 MiB/1.3 MiB (r/w)net
+I210220 22:26:37.222554 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+I210220 22:26:37.375137 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 121 MiB RSS, 217 goroutines, 23 MiB/31 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 1.0/0.6 %(u/s)time, 0.0 %gc (1x), 2.2 MiB/1.3 MiB (r/w)net
+I210220 22:26:47.377151 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 122 MiB RSS, 216 goroutines, 31 MiB/25 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 1.0/0.6 %(u/s)time, 0.0 %gc (0x), 2.2 MiB/1.3 MiB (r/w)net
+I210220 22:26:57.380434 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 122 MiB RSS, 216 goroutines, 37 MiB/20 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.4 MiB (r/w)net
+I210220 22:27:07.386490 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 122 MiB RSS, 216 goroutines, 24 MiB/30 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.8 CGO/sec, 1.0/0.5 %(u/s)time, 0.0 %gc (1x), 2.1 MiB/1.4 MiB (r/w)net
+I210220 22:27:17.385535 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 122 MiB RSS, 217 goroutines, 31 MiB/24 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.3 MiB (r/w)net
+I210220 22:27:27.395698 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 123 MiB RSS, 217 goroutines, 40 MiB/17 MiB/57 MiB GO alloc/idle/total, 20 MiB/23 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.5 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.3 MiB (r/w)net
+I210220 22:27:37.218991 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+I210220 22:27:37.392210 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 123 MiB RSS, 217 goroutines, 24 MiB/29 MiB/57 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.7 CGO/sec, 1.0/0.6 %(u/s)time, 0.0 %gc (1x), 2.1 MiB/1.3 MiB (r/w)net
+I210220 22:27:47.391412 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 123 MiB RSS, 216 goroutines, 35 MiB/21 MiB/57 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.2/0.7 %(u/s)time, 0.0 %gc (0x), 2.4 MiB/1.3 MiB (r/w)net
+I210220 22:27:57.393996 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 124 MiB RSS, 216 goroutines, 41 MiB/16 MiB/57 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.5 MiB/1.2 MiB (r/w)net
+I210220 22:28:07.393960 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 124 MiB RSS, 216 goroutines, 28 MiB/26 MiB/57 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.2/0.6 %(u/s)time, 0.0 %gc (1x), 2.2 MiB/1.3 MiB (r/w)net
+I210220 22:28:17.396921 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 124 MiB RSS, 217 goroutines, 34 MiB/21 MiB/57 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 1.9 MiB/1.3 MiB (r/w)net
+I210220 22:28:27.398083 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 125 MiB RSS, 217 goroutines, 23 MiB/30 MiB/57 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.1/0.6 %(u/s)time, 0.0 %gc (1x), 2.1 MiB/1.3 MiB (r/w)net
+I210220 22:28:37.219124 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+I210220 22:28:37.399068 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 125 MiB RSS, 217 goroutines, 30 MiB/25 MiB/57 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.0 MiB/1.3 MiB (r/w)net
+E210220 22:28:37.404470 518 kv/kvserver/queue.go:1202 ⋮ [n1,replicate] 36 replicas failing with ‹"0 of 1 live stores are able to take a new replica for the range (1 already has a replica); likely not enough nodes in cluster"›
+I210220 22:28:47.402733 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 126 MiB RSS, 217 goroutines, 39 MiB/17 MiB/57 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.3/0.7 %(u/s)time, 0.0 %gc (0x), 1.9 MiB/1.3 MiB (r/w)net
+I210220 22:28:57.218977 435 kv/kvserver/store.go:2625 ⋮ [n1,s1] sstables (read amplification = 0):
+‹›
+I210220 22:28:57.219095 435 kv/kvserver/store.go:2626 ⋮ [n1,s1] ‹›
+‹__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp›
+‹    WAL         7    16 M       -    16 M       -       -       -       -    16 M       -       -       -     1.0›
+‹      0         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      6         0     0 B       -     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹  total         0     0 B       -    16 M     0 B       0     0 B       0    16 M       0     0 B       0     1.0›
+‹  flush         0›
+‹compact         0     0 B          (size == estimated-debt)›
+‹ memtbl         7    32 M›
+‹zmemtbl         0     0 B›
+‹   ztbl         0     0 B›
+‹ bcache         0     0 B    0.0%  (score == hit-rate)›
+‹ tcache         0     0 B    0.0%  (score == hit-rate)›
+‹ titers         0›
+‹ filter         -       -    0.0%  (score == utility)›
+I210220 22:28:57.406973 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 126 MiB RSS, 217 goroutines, 26 MiB/27 MiB/57 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.1/0.5 %(u/s)time, 0.0 %gc (1x), 2.1 MiB/1.3 MiB (r/w)net
+I210220 22:29:07.408121 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 127 MiB RSS, 217 goroutines, 32 MiB/22 MiB/57 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.3 MiB (r/w)net
+I210220 22:29:17.410516 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 127 MiB RSS, 218 goroutines, 38 MiB/18 MiB/57 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.6 %(u/s)time, 0.0 %gc (0x), 2.3 MiB/1.3 MiB (r/w)net
+I210220 22:29:27.421565 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 128 MiB RSS, 218 goroutines, 42 MiB/15 MiB/57 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.0/0.5 %(u/s)time, 0.0 %gc (1x), 2.9 MiB/1.3 MiB (r/w)net
+I210220 22:29:37.215731 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+I210220 22:29:37.425198 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 128 MiB RSS, 219 goroutines, 28 MiB/25 MiB/57 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.6 %(u/s)time, 0.0 %gc (0x), 2.5 MiB/1.3 MiB (r/w)net
+I210220 22:29:47.418125 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 128 MiB RSS, 217 goroutines, 36 MiB/20 MiB/57 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.1/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.3 MiB (r/w)net
+I210220 22:29:57.420999 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 129 MiB RSS, 218 goroutines, 42 MiB/15 MiB/57 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.3 MiB (r/w)net
+I210220 22:30:07.423030 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 129 MiB RSS, 217 goroutines, 32 MiB/22 MiB/58 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.1/0.6 %(u/s)time, 0.0 %gc (1x), 2.1 MiB/1.3 MiB (r/w)net
+I210220 22:30:17.427718 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 130 MiB RSS, 219 goroutines, 38 MiB/17 MiB/58 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.0/0.6 %(u/s)time, 0.0 %gc (0x), 2.5 MiB/1.3 MiB (r/w)net
+I210220 22:30:27.430519 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 130 MiB RSS, 218 goroutines, 24 MiB/28 MiB/58 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.0/0.6 %(u/s)time, 0.0 %gc (1x), 2.5 MiB/1.3 MiB (r/w)net
+I210220 22:30:37.212393 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+I210220 22:30:37.443152 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 130 MiB RSS, 218 goroutines, 30 MiB/24 MiB/58 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.5 %(u/s)time, 0.0 %gc (0x), 3.8 MiB/1.4 MiB (r/w)net
+I210220 22:30:47.429935 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 131 MiB RSS, 218 goroutines, 38 MiB/19 MiB/58 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.2/0.7 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.3 MiB (r/w)net
+I210220 22:30:57.431234 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 131 MiB RSS, 217 goroutines, 44 MiB/13 MiB/58 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.3 MiB (r/w)net
+I210220 22:31:07.434140 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 132 MiB RSS, 218 goroutines, 31 MiB/22 MiB/59 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.2/0.6 %(u/s)time, 0.0 %gc (1x), 2.1 MiB/1.3 MiB (r/w)net
+I210220 22:31:17.436277 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 132 MiB RSS, 218 goroutines, 38 MiB/17 MiB/59 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.6 %(u/s)time, 0.0 %gc (0x), 2.2 MiB/1.3 MiB (r/w)net
+I210220 22:31:27.442032 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 132 MiB RSS, 219 goroutines, 45 MiB/12 MiB/59 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.1/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.2 MiB (r/w)net
+I210220 22:31:37.210390 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+I210220 22:31:37.444647 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 134 MiB RSS, 218 goroutines, 32 MiB/22 MiB/61 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.2/0.6 %(u/s)time, 0.0 %gc (1x), 2.1 MiB/1.3 MiB (r/w)net
+I210220 22:31:47.444319 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 134 MiB RSS, 216 goroutines, 40 MiB/17 MiB/61 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.2/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.3 MiB (r/w)net
+I210220 22:31:57.448713 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 135 MiB RSS, 217 goroutines, 23 MiB/29 MiB/61 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.0/0.5 %(u/s)time, 0.0 %gc (1x), 2.5 MiB/1.3 MiB (r/w)net
+I210220 22:32:07.447844 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 135 MiB RSS, 216 goroutines, 29 MiB/24 MiB/61 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.3 MiB (r/w)net
+I210220 22:32:17.452998 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 135 MiB RSS, 217 goroutines, 36 MiB/20 MiB/61 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.3 MiB (r/w)net
+I210220 22:32:27.456435 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 136 MiB RSS, 217 goroutines, 42 MiB/15 MiB/61 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.3 MiB/1.3 MiB (r/w)net
+I210220 22:32:37.210839 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+I210220 22:32:37.457523 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 136 MiB RSS, 219 goroutines, 28 MiB/26 MiB/61 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.2/0.6 %(u/s)time, 0.0 %gc (1x), 2.2 MiB/1.2 MiB (r/w)net
+I210220 22:32:47.462485 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 136 MiB RSS, 216 goroutines, 35 MiB/21 MiB/61 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.0/0.6 %(u/s)time, 0.0 %gc (0x), 2.3 MiB/1.2 MiB (r/w)net
+I210220 22:32:57.469160 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 136 MiB RSS, 216 goroutines, 41 MiB/16 MiB/61 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.2 MiB (r/w)net
+I210220 22:33:07.467073 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 137 MiB RSS, 216 goroutines, 26 MiB/27 MiB/61 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.0/0.6 %(u/s)time, 0.0 %gc (1x), 2.1 MiB/1.2 MiB (r/w)net
+I210220 22:33:17.471683 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 137 MiB RSS, 217 goroutines, 32 MiB/22 MiB/61 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.5 %(u/s)time, 0.0 %gc (0x), 2.4 MiB/1.2 MiB (r/w)net
+I210220 22:33:27.474820 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 137 MiB RSS, 217 goroutines, 38 MiB/17 MiB/61 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.2 MiB (r/w)net
+I210220 22:33:37.208613 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+I210220 22:33:37.478693 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 138 MiB RSS, 217 goroutines, 23 MiB/30 MiB/60 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.0/0.6 %(u/s)time, 0.0 %gc (1x), 2.1 MiB/1.2 MiB (r/w)net
+I210220 22:33:47.481790 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 138 MiB RSS, 216 goroutines, 31 MiB/24 MiB/60 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.1/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.2 MiB (r/w)net
+I210220 22:33:57.484432 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 138 MiB RSS, 216 goroutines, 38 MiB/18 MiB/60 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.0/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.2 MiB (r/w)net
+I210220 22:34:07.487900 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 138 MiB RSS, 216 goroutines, 25 MiB/27 MiB/60 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.1/0.6 %(u/s)time, 0.0 %gc (1x), 2.3 MiB/1.1 MiB (r/w)net
+I210220 22:34:17.491622 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 139 MiB RSS, 217 goroutines, 31 MiB/23 MiB/60 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.5 %(u/s)time, 0.0 %gc (0x), 2.2 MiB/1.2 MiB (r/w)net
+I210220 22:34:27.493968 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 139 MiB RSS, 217 goroutines, 38 MiB/18 MiB/60 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.6 %(u/s)time, 0.0 %gc (0x), 2.2 MiB/1.2 MiB (r/w)net
+I210220 22:34:37.206911 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+I210220 22:34:37.498991 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 139 MiB RSS, 217 goroutines, 43 MiB/13 MiB/60 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.2 MiB/1.2 MiB (r/w)net
+I210220 22:34:47.501019 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 140 MiB RSS, 216 goroutines, 29 MiB/25 MiB/59 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.4/0.6 %(u/s)time, 0.0 %gc (1x), 2.3 MiB/1.1 MiB (r/w)net
+I210220 22:34:57.508969 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 140 MiB RSS, 216 goroutines, 35 MiB/20 MiB/59 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.2 MiB/1.2 MiB (r/w)net
+I210220 22:35:07.509658 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 140 MiB RSS, 216 goroutines, 41 MiB/15 MiB/59 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.6 %(u/s)time, 0.0 %gc (0x), 2.2 MiB/1.2 MiB (r/w)net
+I210220 22:35:17.516840 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 141 MiB RSS, 217 goroutines, 28 MiB/26 MiB/59 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.2/0.6 %(u/s)time, 0.0 %gc (1x), 2.2 MiB/1.2 MiB (r/w)net
+I210220 22:35:27.519243 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 141 MiB RSS, 217 goroutines, 34 MiB/21 MiB/59 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.1 MiB (r/w)net
+I210220 22:35:37.201805 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+I210220 22:35:37.520450 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 141 MiB RSS, 217 goroutines, 40 MiB/16 MiB/59 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.1 MiB (r/w)net
+I210220 22:35:47.519758 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 141 MiB RSS, 216 goroutines, 27 MiB/26 MiB/59 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.3/0.6 %(u/s)time, 0.0 %gc (1x), 2.1 MiB/1.1 MiB (r/w)net
+I210220 22:35:57.524247 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 142 MiB RSS, 216 goroutines, 34 MiB/21 MiB/59 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.2 MiB (r/w)net
+I210220 22:36:07.528882 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 142 MiB RSS, 216 goroutines, 40 MiB/16 MiB/59 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.8/0.5 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.1 MiB (r/w)net
+I210220 22:36:17.531319 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 142 MiB RSS, 217 goroutines, 26 MiB/26 MiB/59 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.2/0.6 %(u/s)time, 0.0 %gc (1x), 2.1 MiB/1.2 MiB (r/w)net
+I210220 22:36:27.532953 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 143 MiB RSS, 217 goroutines, 33 MiB/22 MiB/59 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 1.1/0.6 %(u/s)time, 0.0 %gc (0x), 2.1 MiB/1.1 MiB (r/w)net
+I210220 22:36:37.202291 436 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+I210220 22:36:37.539884 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 143 MiB RSS, 217 goroutines, 40 MiB/16 MiB/59 MiB GO alloc/idle/total, 36 MiB/39 MiB CGO alloc/total, 0.6 CGO/sec, 0.9/0.7 %(u/s)time, 0.0 %gc (0x), 2.2 MiB/1.1 MiB (r/w)net
+I210220 22:36:47.539502 408 server/status/runtime.go:525 ⋮ [n1] runtime stats: 143 MiB RSS, 216 goroutines, 26 MiB/26 MiB/59 MiB GO alloc/idle/total, 68 MiB/71 MiB CGO alloc/total, 0.7 CGO/sec, 1.3/0.6 %(u/s)time, 0.0 %gc (1x), 6.6 MiB/1.1 MiB (r/w)net
