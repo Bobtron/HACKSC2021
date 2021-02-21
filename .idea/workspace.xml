@@ -2,27 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9214c3bf-7006-4e44-ad93-43eb08f046e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/stream-chat-javascript/public/form/basic-transaction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-chat-javascript/public/form/sendxrp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/get-account-info.js" beforeDir="false" afterPath="$PROJECT_DIR$/stream-chat-javascript/public/get-account-info.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/000002.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/000008.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/000009.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/000010.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/form/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/stream-chat-javascript/public/form/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/form/sendxrp.js" beforeDir="false" afterPath="$PROJECT_DIR$/stream-chat-javascript/public/form/sendxrp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/000004.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/000005.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/000006.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/000007.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/000011.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/000014.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/000016.sst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/MANIFEST-000001" beforeDir="false" afterPath="$PROJECT_DIR$/stream-chat-javascript/public/node1/MANIFEST-000001" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/cockroach-pebble.Personas-MacBook-Pro.personanongrata.2021-02-20T22_18_19Z.009659.log" beforeDir="false" afterPath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/cockroach-pebble.Personas-MacBook-Pro.personanongrata.2021-02-20T22_18_19Z.009659.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/cockroach.Personas-MacBook-Pro.personanongrata.2021-02-20T22_18_18Z.009659.log" beforeDir="false" afterPath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/cockroach.Personas-MacBook-Pro.personanongrata.2021-02-20T22_18_18Z.009659.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memprof.2021-02-20T22_23_07.316.42695944.pprof" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memprof.2021-02-20T22_23_37.324.44163688.pprof" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memprof.2021-02-20T22_29_57.421.44282688.pprof" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memprof.2021-02-20T22_30_57.431.45806632.pprof" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memprof.2021-02-20T22_31_27.442.47180144.pprof" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memstats.2021-02-20T22_36_07.528.148889600.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memstats.2021-02-20T22_36_17.531.149196800.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memstats.2021-02-20T22_36_27.533.149504000.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memstats.2021-02-20T22_36_37.539.149798912.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memstats.2021-02-20T22_36_47.540.150118400.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memprof.2021-02-20T22_49_07.716.47725152.pprof" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memprof.2021-02-20T23_09_58.086.47991008.pprof" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memprof.2021-02-20T23_20_08.266.48045912.pprof" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memprof.2021-02-20T23_22_58.304.49398912.pprof" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memprof.2021-02-20T23_25_58.354.50341872.pprof" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memstats.2021-02-20T23_32_38.451.193503232.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memstats.2021-02-20T23_32_48.449.193802240.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memstats.2021-02-20T23_32_58.453.194093056.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memstats.2021-02-20T23_33_08.455.194383872.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/heap_profiler/memstats.2021-02-20T23_33_18.466.194678784.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,57 +39,61 @@
     <session id="871708940">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="11" />
-          <entry key="js" value="12" />
+          <entry key="css" value="1" />
+          <entry key="html" value="12" />
+          <entry key="js" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="11" />
-          <entry key="JavaScript" value="12" />
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="12" />
+          <entry key="JavaScript" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="116" />
-          <entry key="js" value="212" />
+          <entry key="html" value="199" />
+          <entry key="js" value="741" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="116" />
-          <entry key="JavaScript" value="212" />
+          <entry key="HTML" value="199" />
+          <entry key="JavaScript" value="741" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stream-chat-javascript/public/get-account-info.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-12">
-              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stream-chat-javascript/public/form/sendxrp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+            <state relative-caret-position="165">
+              <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/stream-chat-javascript/public/form/form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1005">
+              <caret line="67" column="42" lean-forward="true" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stream-chat-javascript/public/form/basic-transaction.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="885">
@@ -100,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/stream-chat-javascript/public/test-get-account-info.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+              <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -124,10 +130,10 @@
         <option value="$PROJECT_DIR$/test_app.js" />
         <option value="$PROJECT_DIR$/stream-chat-javascript/public/browser-demo.html" />
         <option value="$PROJECT_DIR$/stream-chat-javascript/public/test-get-account-info.html" />
-        <option value="$PROJECT_DIR$/stream-chat-javascript/public/form/form.html" />
-        <option value="$PROJECT_DIR$/stream-chat-javascript/public/form/sendxrp.js" />
         <option value="$PROJECT_DIR$/stream-chat-javascript/public/get-account-info.js" />
         <option value="$PROJECT_DIR$/stream-chat-javascript/public/basic-transaction.js" />
+        <option value="$PROJECT_DIR$/stream-chat-javascript/public/form/sendxrp.js" />
+        <option value="$PROJECT_DIR$/stream-chat-javascript/public/form/form.html" />
       </list>
     </option>
   </component>
@@ -199,6 +205,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/stream-chat-javascript/public/form" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -211,7 +222,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.basic-transaction.js">
+  <component name="RunManager" selected="JavaScript Debug.form.html">
     <configuration name="browser-demo.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/HACKSC2021/stream-chat-javascript/public/browser-demo.html">
       <method v="2" />
     </configuration>
@@ -232,9 +243,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.form.html" />
         <item itemvalue="Node.js.basic-transaction.js" />
         <item itemvalue="JavaScript Debug.test-get-account-info.html" />
-        <item itemvalue="JavaScript Debug.form.html" />
         <item itemvalue="JavaScript Debug.browser-demo.html" />
       </list>
     </recent_temporary>
@@ -249,24 +260,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613851695300</updated>
-      <workItem from="1613851697576" duration="6249000" />
+      <workItem from="1613851697576" duration="6309000" />
+      <workItem from="1613881734879" duration="1494000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6249000" />
+    <option name="totallyTimeSpent" value="7803000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
@@ -274,6 +282,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -309,31 +321,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stream-chat-javascript/public/form/form.html">
+    <entry file="file://$PROJECT_DIR$/stream-chat-javascript/public/get-account-info.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="15">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stream-chat-javascript/public/form/view.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stream-chat-javascript/public/form/view.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2262" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stream-chat-javascript/public/test-get-account-info.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stream-chat-javascript/public/get-account-info.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stream-chat-javascript/public/form/sendxrp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -341,6 +347,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
           <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stream-chat-javascript/public/form/sendxrp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stream-chat-javascript/public/form/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="67" column="42" lean-forward="true" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
         </state>
       </provider>
     </entry>
