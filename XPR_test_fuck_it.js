@@ -1,12 +1,12 @@
-const RippleAPI = require('ripple-lib').RippleAPI
+const RippleAPI = require('ripple-lib').RippleAPI;
 // TESTNET ADDRESS 1
-const ADDRESS_1 = 'rpSDxPwUyUzyFxAyVGwGt1hoJGC8neLZhF'
+const ADDRESS_1 = 'rw3VB5Q9cZAPopdXmZssPFCfHfcTssd9ZQ'
 const SECRET_1 = "sh7ePwac3g2Py36YnnzTqJYxrEJpR"
 // TESTNET ADDRESS 2
-const ADDRESS_2 = "rBemDgBYvHhGXcuJBMMatQLEAaRKgBc32g"
-const instructions = {maxLedgerVersionOffset: 5}
+const ADDRESS_2 = "rpSDxPwUyUzyFxAyVGwGt1hoJGC8neLZhF"
+const instructions = {maxLedgerVersionOffset: 5};
 const currency = 'XRP'
-const amount = '100'
+const amount = '900'
 const payment = {
   source: {
     address: ADDRESS_1,
@@ -26,7 +26,7 @@ const payment = {
 const api = new RippleAPI({
   //server: 'wss://s1.ripple.com'                 // MAINNET
   server: 'wss://s.altnet.rippletest.net:51233'   // TESTNET
-})
+});
 api.connect().then(() => {
   console.log('Connected...')
   api.preparePayment(ADDRESS_1, payment, instructions).then(prepared => {
