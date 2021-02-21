@@ -35,17 +35,25 @@ function handler(req, res){
       Destination Address\
       <input type="text" name="D">\
       <br>\
+      Message\
+      <input type="text" name="E" id="message_box" style="display: none;">\
+      <br>\
       <span id="result"></span> \
       <br> \
+      <input type="button" value="Make transaction" onclick="reveal()">\
       <input type="submit" value="Submit"> \
   </form> \
   <script> \
+    function reveal(){\
+        document.getElementById("message_box").style.display = "block";\
+    }\
     function ajax(){ \
       var a = document.forms["myForm"]["A"].value; \
       var b = document.forms["myForm"]["B"].value; \
       var c = document.forms["myForm"]["C"].value; \
       var d = document.forms["myForm"]["D"].value; \
-      var formdata = "A="+a+"&B="+b+"&C="+c+"&D="+d; \
+      var e = document.forms["myForm"]["E"].value; \
+      var formdata = "A="+a+"&B="+b+"&C="+c+"&D="+d+"&E="+e; \
       \
       xmlhttp = new XMLHttpRequest(); \
       xmlhttp.onreadystatechange=function(){ \
@@ -79,6 +87,7 @@ function handler(req, res){
             var b = formdata.split("&")[1].substring(2);//eval(formdata.split("&")[1]);
             var c = formdata.split("&")[2].substring(2);//eval(formdata.split("&")[2]);
             var d = formdata.split("&")[3].substring(2);//eval(formdata.split("&")[3]);
+            var e = formdata.split("&")[4].substring(2);
             // console.log(formdata);
 
             let ADDRESS_1 = a;//'rpSDxPwUyUzyFxAyVGwGt1hoJGC8neLZhF'
@@ -86,6 +95,7 @@ function handler(req, res){
             // TESTNET ADDRESS 2
             let amount = parseInt(c);//'100';
             let ADDRESS_2 = d;//"rBemDgBYvHhGXcuJBMMatQLEAaRKgBc32g"
+            let message = e
 
 
             let payment = {

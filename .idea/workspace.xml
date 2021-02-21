@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9214c3bf-7006-4e44-ad93-43eb08f046e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/000047.log" beforeDir="false" afterPath="$PROJECT_DIR$/stream-chat-javascript/public/node1/000047.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/cockroach.Personas-MacBook-Pro.personanongrata.2021-02-20T22_18_18Z.009659.log" beforeDir="false" afterPath="$PROJECT_DIR$/stream-chat-javascript/public/node1/logs/cockroach.Personas-MacBook-Pro.personanongrata.2021-02-20T22_18_18Z.009659.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/test_app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,7 +23,8 @@
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -41,33 +44,36 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="199" />
-          <entry key="js" value="1090" />
+          <entry key="js" value="1305" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="213" />
-          <entry key="JavaScript" value="1076" />
+          <entry key="HTML" value="221" />
+          <entry key="JavaScript" value="1283" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/XPR_test_fuck_it.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="338">
+              <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+              <folding>
+                <element signature="n#style#0;n#input#4;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,8 +110,8 @@
         <option value="$PROJECT_DIR$/stream-chat-javascript/public/form/sendxrp.js" />
         <option value="$PROJECT_DIR$/stream-chat-javascript/public/form/form.html" />
         <option value="$PROJECT_DIR$/stream-chat-javascript/anothertest.html" />
-        <option value="$PROJECT_DIR$/test_app.js" />
         <option value="$PROJECT_DIR$/XPR_test_fuck_it.js" />
+        <option value="$PROJECT_DIR$/test_app.js" />
       </list>
     </option>
   </component>
@@ -227,11 +233,12 @@
       <updated>1613851695300</updated>
       <workItem from="1613851697576" duration="6309000" />
       <workItem from="1613881734879" duration="5758000" />
+      <workItem from="1613889865960" duration="999000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12067000" />
+    <option name="totallyTimeSpent" value="13066000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -294,13 +301,7 @@
         <state relative-caret-position="-2262" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stream-chat-javascript/anothertest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/stream-chat-javascript/anothertest.html" />
     <entry file="file://$PROJECT_DIR$/stream-chat-javascript/public/form/sendxrp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -325,10 +326,10 @@
     <entry file="file://$PROJECT_DIR$/get-account-info.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_app.js">
+    <entry file="file://$PROJECT_DIR$/XPR_test_fuck_it.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="315">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -339,10 +340,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/XPR_test_fuck_it.js">
+    <entry file="file://$PROJECT_DIR$/test_app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        <state relative-caret-position="338">
+          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#input#4;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
