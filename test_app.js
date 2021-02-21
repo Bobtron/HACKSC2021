@@ -8,6 +8,10 @@ const api = new RippleAPI({
     server: 'wss://s.altnet.rippletest.net:51233'   // TESTNET
 });
 
+var async = require('async');
+var fs = require('fs');
+
+
 // Create a function to handle every HTTP request
 function handler(req, res){
 
@@ -93,13 +97,13 @@ function handler(req, res){
             let username = a;//'rpSDxPwUyUzyFxAyVGwGt1hoJGC8neLZhF'
             let password = b;//"sh7ePwac3g2Py36YnnzTqJYxrEJpR"
 
-            let ADDRESS_1;// ADD THIS HERERE
-            let SECRET_1;// ADD THIS HERERER
+            let ADDRESS_1 = 'rpSDxPwUyUzyFxAyVGwGt1hoJGC8neLZhF';// ADD THIS HERERE
+            let SECRET_1 = "sh7ePwac3g2Py36YnnzTqJYxrEJpR";// ADD THIS HERERER
 
             // TESTNET ADDRESS 2
             let amount = parseInt(c);//'100';
             let ADDRESS_2 = d;//"rBemDgBYvHhGXcuJBMMatQLEAaRKgBc32g"
-            let message = e
+            let message = e;
 
 
             let payment = {
@@ -119,22 +123,84 @@ function handler(req, res){
                 }
             };
 
-            api.connect().then(() => {
-                console.log('Connected...');
-                api.preparePayment(ADDRESS_1, payment, instructions).then(prepared => {
-                    const {signedTransaction, id} = api.sign(prepared.txJSON, SECRET_1);
-                    console.log(id)
-                    api.submit(signedTransaction).then(result => {
-                        console.log(JSON.stringify(result, null, 2));
-                        api.disconnect()
-                    })
-                })
-            }).catch(console.error);
+            // api.connect().then(() => {
+            //     console.log('Connected...');
+            //     api.preparePayment(ADDRESS_1, payment, instructions).then(prepared => {
+            //         const {signedTransaction, id} = api.sign(prepared.txJSON, SECRET_1);
+            //         console.log(id)
+            //         api.submit(signedTransaction).then(result => {
+            //             console.log(JSON.stringify(result, null, 2));
+            //             api.disconnect()
+            //         })
+            //     })
+            // }).catch(console.error);
 
             var result = a+b+c+d;//calc(a,b);
 
             //fill in the result and form values
             form = result.toString();
+
+
+            let Pool = require('pg').Pool;
+            let pool = new Pool({
+                user: 'justin',
+                host: 'free-tier.gcp-us-central1.cockroachlabs.cloud',
+                database: 'ruddy-mole-846.defaultdb',
+                password: 'thisisapassword',
+                port: 26257,
+                // sslmode:"require"
+                ssl: {
+                    ca: fs.readFileSync('certs/cc-ca.crt').toString()
+                }
+            });
+
+            console.log("oeuo");
+
+            pool.connect(function (err, client, done) {
+                console.log('here');
+                // Close communication with the database and exit.
+                var finish = function () {
+                    done();
+                    process.exit();
+                };
+
+                if (err) {
+                    console.error('could not connect to cockroachdb', err);
+                    finish();
+                }
+                async.waterfall([
+                        function (next) {
+                            // Create the 'accounts' table.
+                            client.query('DROP TABLE messages');
+                            client.query('CREATE TABLE IF NOT EXISTS messages (id INT NOT NULL PRIMARY KEY, mess int);', next);
+                        },
+                        function (results, next) {
+                            // Insert two rows into the 'accounts' table.
+
+                            client.query('INSERT INTO messages (id, mess) VALUES (1, ' + amount + ');', next);
+                            console.log("bob");
+                        },
+                        function (results, next) {
+                            // Print out account balances.
+                            client.query('SELECT * FROM messages;', next);
+                            console.log("boby");
+                        },
+                    ],
+                    function (err, results) {
+                        if (err) {
+                            console.error('Error inserting into and selecting from messages: ', err);
+                            finish();
+                        }
+
+                        console.log('Initial messages:');
+                        results.rows.forEach(function (row) {
+                            console.log(row);
+                        });
+
+                        finish();
+                    });
+            });
+
 
             //respond
             res.setHeader('Content-Type', 'text/html');

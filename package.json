@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/Bobtron/HACKSC2021#readme",
   "dependencies": {
+    "async": "^3.2.0",
+    "fs": "^0.0.1-security",
+    "pg": "^8.5.1",
     "ripple-lib": "^1.9.0"
   }
 }
