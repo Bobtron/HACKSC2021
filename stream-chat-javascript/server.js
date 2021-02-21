@@ -21,7 +21,7 @@ app.get('/token', (req, res) => {
   const { username } = req.query;
   if (username) {
     const token = serverClient.createToken(username);
-    res.status(200).json({ token, status: 'sucess' });
+    res.status(200).json({ token, status: 'success' });
   } else {
     res.status(401).json({ message: 'invalid request', status: 'error' });
   }
