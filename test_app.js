@@ -23,10 +23,10 @@ function handler(req, res){
 </head> \
 <body> \
   <form name="myForm" action="" onsubmit="return ajax();"method="post">\
-      Sender Address\
+      Username\
       <input type="text" name="A">\
       <br>\
-      Sender Secret\
+      Password\
       <input type="text" name="B">\
       <br>\
       Amount\
@@ -90,8 +90,12 @@ function handler(req, res){
             var e = formdata.split("&")[4].substring(2);
             // console.log(formdata);
 
-            let ADDRESS_1 = a;//'rpSDxPwUyUzyFxAyVGwGt1hoJGC8neLZhF'
-            let SECRET_1 = b;//"sh7ePwac3g2Py36YnnzTqJYxrEJpR"
+            let username = a;//'rpSDxPwUyUzyFxAyVGwGt1hoJGC8neLZhF'
+            let password = b;//"sh7ePwac3g2Py36YnnzTqJYxrEJpR"
+
+            let ADDRESS_1;// ADD THIS HERERE
+            let SECRET_1;// ADD THIS HERERER
+
             // TESTNET ADDRESS 2
             let amount = parseInt(c);//'100';
             let ADDRESS_2 = d;//"rBemDgBYvHhGXcuJBMMatQLEAaRKgBc32g"
