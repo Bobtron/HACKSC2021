@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^1.6.0",
     "express": "^4.17.1",
     "ripple-lib": "^1.9.0",
     "stream-chat": "^3.1.0"
